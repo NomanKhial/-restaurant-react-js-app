@@ -1,6 +1,6 @@
 import { menu_list } from "../../assets/assets";
 import "./menu.css";
-function Menu() {
+function Menu({catagory, setCatagory}) {
   return (
     <div className="menu">
       <h1>Explore our menu</h1>
@@ -14,8 +14,10 @@ function Menu() {
       </p>
       <div className="menu-list">
         {menu_list.map((menu, index) => (
-          <div key={index}>
-            <img src={menu.menu_image} />
+          <div onClick={()=>{
+             setCatagory(itemSelected => itemSelected === menu.menu_name ? 'All' : menu.menu_name)
+             }} key={index}>
+            <img className={catagory === menu.menu_name ? 'activeCatagory' : ''} src={menu.menu_image} />
             <p>{menu.menu_name}</p>
           </div>
         ))}
