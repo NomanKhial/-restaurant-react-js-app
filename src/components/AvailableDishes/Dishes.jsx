@@ -1,19 +1,20 @@
 import { useAppContext } from "../../context/storeContext";
+import FoodItem from "../FoodItem/FoodItem";
 import  "./Dishes.css";
 
 function Dishes({catagory}) {
     const {food_list: meals} = useAppContext()
      
   return (
-    <div>
-        {
-                meals.map(({image, name, id})=>(
-                    <div key={id}>
-                        <img src={image}/>
-                        <p>{name}</p>
-                    </div>
-                ))
-        }
+    <div className="food-display">
+      <h2>Top Dishes near you</h2>
+      <div className="food-display-list">
+          {
+            meals.map(({name, price, image, _id, description, category : mealtype})=>(
+              <FoodItem name={name} price={price} image={image} _id={_id} description={description} mealtype={mealtype} />
+            ))
+          }
+      </div>
     </div>
   )
 }
