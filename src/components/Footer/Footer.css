@@ -42,3 +42,14 @@ hr{
     background-color: gray;
     
 }
+/* responsive styles for footer */
+@media (max-width: 750px){
+    .ft-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .ft-copy{
+        text-align: center;
+    }
+}

@@ -38,7 +38,7 @@ function Footer() {
         </div>
       </div>
       <hr/>
-      <div>
+      <div className="ft-copy">
         <p>Copyright {new Date().getFullYear()} © Made with ❤️ by NomanKhial. All Rights Reserved.</p>
       </div>
     </footer>
