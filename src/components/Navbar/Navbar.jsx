@@ -1,9 +1,13 @@
 import "./Navbar.css";
 import { assets } from "../../assets/assets.js";
 import { useState } from "react";
+import { useAppContext } from "../../context/storeContext.jsx";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('home')
+  const {cartCount} = useAppContext()
+
+
   return (
     <header>
     <nav>
@@ -26,7 +30,7 @@ function Navbar() {
 
             <div className="mini-menu">
               <img src={assets.basket_icon} />
-              <div className="dot"></div>
+              <div className="dot">{cartCount['itemId']}</div>
             </div>
 
             <button className="nav-btn">Sign In</button>
