@@ -3,7 +3,7 @@ import "./menu.css";
 function Menu({catagory, setCatagory}) {
 
   return (
-    <div className="menu">
+    <div className="menu" id="menu">
       <h1>Explore our menu</h1>
       <p>
         {" "}

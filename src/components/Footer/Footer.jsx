@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <div className="ft-content">
+      <div className="ft-content" id="contact">
         <div className="ft-left-side  ft-common">
           <img src={assets.logo} alt="footer logo" />
           <p>

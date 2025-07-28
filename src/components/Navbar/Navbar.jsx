@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets.js";
 import { useState } from "react";
 import { useAppContext } from "../../context/storeContext.jsx";
+import { NavLink } from "react-router";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('home')
@@ -12,16 +13,16 @@ function Navbar() {
     <header>
     <nav>
         {/* logo goes here */}
-        <img src={assets.logo} alt="logo" className="logo" />
+       <NavLink to='/'> <img src={assets.logo} alt="logo" className="logo" /></NavLink>
 
         {/* navigation */}
        
           {/* centered menu */}
           <ul className="navbar-menu">
-            <li onClick={()=> setActiveLink('home')} className={activeLink == "home" ? 'activeLink' : ''}>home</li>
-            <li onClick={()=> setActiveLink('menu')} className={activeLink == "menu" ? 'activeLink' : ''}>menu</li>
-            <li onClick={()=> setActiveLink('mobile')} className={activeLink == "mobile" ? 'activeLink' : ''}>mobile</li>
-            <li onClick={()=> setActiveLink('contactus')} className={activeLink == "contactus" ? 'activeLink' : ''}>contact us</li>
+            <NavLink to='/' onClick={()=> setActiveLink('home')} className={activeLink == "home" ? 'activeLink' : ''}>home</NavLink>
+            <a href="#menu" onClick={()=> setActiveLink('menu')} className={activeLink == "menu" ? 'activeLink' : ''}>menu</a>
+            <a href="#download-app" onClick={()=> setActiveLink('mobile')} className={activeLink == "mobile" ? 'activeLink' : ''}>mobile</a>
+            <a href="#contact" onClick={()=> setActiveLink('contactus')} className={activeLink == "contactus" ? 'activeLink' : ''}>contact us</a>
           </ul>
 
           {/* right menu */}
