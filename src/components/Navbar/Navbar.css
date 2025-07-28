@@ -54,3 +54,49 @@ nav{
     top:-8px;
     right: -8px;
 }
+
+/* responsive design for screen upto 1080px */
+@media (max-width: 1050px){
+    .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .nav-btn{
+        padding: 8px 25px;
+    }
+}
+/* responsive design for screen upto 900px */
+@media (max-width: 900px){
+    .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .nav-btn{
+        padding: 8px 25px; 
+        font-size: 15px;
+    }
+}
+/* responsive design for screen upto 900px */
+@media (max-width: 750px){
+    .navbar-menu{
+       display: none;
+    }
+}
