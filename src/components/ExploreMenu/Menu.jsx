@@ -1,6 +1,7 @@
 import { menu_list } from "../../assets/assets";
 import "./menu.css";
 function Menu({catagory, setCatagory}) {
+
   return (
     <div className="menu">
       <h1>Explore our menu</h1>

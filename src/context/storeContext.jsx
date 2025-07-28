@@ -7,7 +7,7 @@ export default function AppContextProvider ({children}) {
 
         const [cartCount, setCartCount] = useState({})
 
-        function addToCart(itemId, name) {
+        function addToCart(itemId, name, ) {
             if (!cartCount[itemId]) {
                 setCartCount(prev => ({...prev, [name]: `${name} X ${prev[itemId] ?? 1}`,  [itemId] : 1}))
             }else{
