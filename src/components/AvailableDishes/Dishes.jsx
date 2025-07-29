@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useAppContext } from "../../context/storeContext";
 import FoodItem from "../FoodItem/FoodItem";
 import  "./Dishes.css";
@@ -6,6 +7,9 @@ function Dishes({catagory}) {
     const {food_list: meals} = useAppContext()
 
 
+    useEffect(()=>{
+      console.log("Meals updated:");
+    }, [meals])
      
   return (
     <div className="food-display">

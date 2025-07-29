@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets.js";
 import { useState } from "react";
 import { useAppContext } from "../../context/storeContext.jsx";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 function Navbar({setLoginPopup, loginPopUp}) {
   const [activeLink, setActiveLink] = useState('home')
@@ -30,7 +30,7 @@ function Navbar({setLoginPopup, loginPopUp}) {
             <img src={assets.search_icon} />
 
             <div className="mini-menu">
-              <img src={assets.basket_icon} />
+              <Link to='/cart'><img src={assets.basket_icon} /></Link>
               <div className="dot">{cartCount['itemId']}</div>
             </div>
 

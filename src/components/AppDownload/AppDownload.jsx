@@ -3,7 +3,7 @@ import "./AppDownload.css"
 function AppDownload() {
   return (
     <div className="app-download" id="download-app">
-        <p>Experience the Best Download Our <br/> App</p>
+        <h4>Experience the Best Download Our <br/> App</h4>
         <div className="app-download-icons">
             <img src={assets.play_store}/>
             <img src={assets.app_store} />

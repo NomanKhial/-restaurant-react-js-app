@@ -11,7 +11,7 @@ function Header() {
           could also use phrases like "Mouth-watering," or "Flavorful" to
           describe the food itself.
         </p>
-        <button>View Menu</button>
+      <a href='#menu'><button>View Menu</button></a>
       </div>
     </div>
   );

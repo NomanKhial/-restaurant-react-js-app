@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
 import { food_list } from "../assets/assets";
-import { useEffect } from "react";
 const AppContext = createContext(null)
 
 export default function AppContextProvider ({children}) {
@@ -19,10 +18,6 @@ export default function AppContextProvider ({children}) {
             setCartCount(prev => ({...prev, [itemId]: prev[itemId] - 1}))
         }
 
-        useEffect(()=>{
-            console.log(cartCount)
-        }, [cartCount])
-
     const store = {
             food_list,
             addToCart,
@@ -36,6 +31,8 @@ export default function AppContextProvider ({children}) {
     
 }
 
-export function useAppContext(){
+function useAppContext(){
     return useContext(AppContext)
 }
+
+export {useAppContext}

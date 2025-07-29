@@ -4,6 +4,7 @@ import {routes} from "./pages/routes.js";
 import Footer from "./components/Footer/Footer.jsx";
 import LoginPopUp from "./components/LoginPopUp/LoginPopUp.jsx";
 import { useState } from "react";
+import ScrollToTop from "./components/SrollToTop/ScrollToTop.jsx";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     </Routes>
     </div>
      <Footer/>
+     <ScrollToTop/>
     </>
   );
 }

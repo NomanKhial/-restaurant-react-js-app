@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { assets } from "../../assets/assets";
 import "./FoodItem.css";
 import { useAppContext } from "../../context/storeContext";
@@ -12,6 +11,7 @@ function FoodItem({
 }) {
   const { addToCart, removeFeomCart, cartCount } =
     useAppContext();
+
   return (
     <div key={_id} className="food-item">
       <div className="food-item-image">
