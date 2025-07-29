@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAppContext } from "../../context/storeContext.jsx";
 import { NavLink } from "react-router";
 
-function Navbar() {
+function Navbar({setLoginPopup, loginPopUp}) {
   const [activeLink, setActiveLink] = useState('home')
   const {cartCount} = useAppContext()
 
@@ -34,7 +34,7 @@ function Navbar() {
               <div className="dot">{cartCount['itemId']}</div>
             </div>
 
-            <button className="nav-btn">Sign In</button>
+            <button onClick={()=> setLoginPopup(prev => !prev)} className="nav-btn">{loginPopUp ? 'Sign Out' : 'Sign In' }</button>
           </div>
   </nav>
     </header>
