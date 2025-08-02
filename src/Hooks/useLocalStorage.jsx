@@ -9,7 +9,7 @@ function useLocalStorage() {
     }
 
     function getLocalStorage(key) {
-       return JSON.parse(localStorage.getItem(key)) || 'light'
+       return JSON.parse(localStorage.getItem(key)) ?? 'dark'
     }
   return {
     setLocalStorage,

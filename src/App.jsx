@@ -17,6 +17,7 @@ function App() {
   const {getLocalStorage} = useLocalStorage()
 
   return (
+    
     <div onClick={(e)=>{
       e.preventDefault()
      if(e.target.tagName != 'INPUT'){
