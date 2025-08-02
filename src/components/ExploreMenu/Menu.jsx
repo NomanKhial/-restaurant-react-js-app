@@ -1,6 +1,20 @@
+import { useLocation } from "react-router";
 import { menu_list } from "../../assets/assets";
 import "./menu.css";
+import { useEffect } from "react";
 function Menu({catagory, setCatagory}) {
+
+
+    const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <div className="menu" id="menu">

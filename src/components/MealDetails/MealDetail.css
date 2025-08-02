@@ -1,0 +1,81 @@
+.meal-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 47px 0;
+      animation: fadeIn 1s;
+
+}
+
+.meal-detail-card{
+    border: 2px solid tomato;
+    max-width: 360px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    background-color: #fff;
+}
+.featured-img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.category{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.back-btn, .category{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: tomato;
+    color: white;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    font-size: 14px;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    font-weight: 500;
+}
+.flex-conatainer{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.rating-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price-tag{
+    color: tomato;
+    font-size: 30px;
+}
+.tag-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tag-order button{
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 1.2s;
+}
+.tag-order button:hover{
+    scale: 1.05;
+}

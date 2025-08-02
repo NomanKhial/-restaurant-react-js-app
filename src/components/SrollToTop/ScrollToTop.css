@@ -1,9 +1,22 @@
-button{
-    border: none;
-    padding: 20px 40px;
-    background-color: tomato;
-    color: white;
-    position: sticky;
-    left: 10px;
-    bottom: 100px;
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: #f16524;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: #d6531f;
+  transform: translateY(-3px);
 }

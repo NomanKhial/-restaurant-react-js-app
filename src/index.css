@@ -7,6 +7,7 @@
 }
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -25,6 +26,102 @@ a {
     opacity: 1;
   }
 }
+
+@keyframes slideIn {
+    0%{
+        transform: translateY(-500%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
 ul{
   list-style: none;
 }
+
+.mode-btn{
+  border: none;
+  padding: 13px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+.light-mode{
+  background-color: #fff;
+  .mode-btn{
+    background-color: black;
+    color: #fff;
+  }
+}
+.dark-mode{
+  background-color: black;
+  color: white;
+  .navbar-menu{
+    color: white;
+  }
+  .navbar-right{
+  border: 2px solid white;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: white;
+  }
+  .nav-btn{
+    color: white;
+  }
+  .menu *{
+    color: white;
+  }
+  .food-item{
+    border: 2px solid white;
+  }
+    .app-download-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+   
+  .app-download-icons div{
+    padding: 2px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  .search-container, .meal-detail-card{
+    color: black;
+  }
+  .meal-detail-card{
+    border: 3px solid tomato;
+  }
+ .place-order, .app-download{
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 20px;
+ }
+ .cart-btn-container{
+  color: black;
+ }
+ .cart-bottom *{
+  color: white;
+ }
+
+ .login-popup{
+  background-color: #b79b9b90;
+ }
+
+ .login-popup-container{
+  background-color: black;
+  color: white;
+ }
+
+ .login-popup-header h2{
+  color: white;
+ }
+
+ @media (max-width: 768px) {
+  .navbar-right{
+    display: none;
+  }
+}
+}
+

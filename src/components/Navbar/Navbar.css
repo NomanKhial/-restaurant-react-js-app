@@ -54,9 +54,22 @@ nav{
     top:-8px;
     right: -8px;
 }
+.search-icon{
+    cursor: pointer;
+}
+.btn-group{
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 1400px) {
+  .navbar-right, .navbar-menu{
+    display: none;
+  }
+}
 
 /* responsive design for screen upto 1080px */
-@media (max-width: 1050px){
+@media (min-width: 1401px){
     .logo{
         width: 140px;
     }

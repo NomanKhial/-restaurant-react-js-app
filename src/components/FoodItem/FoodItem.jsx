@@ -1,6 +1,7 @@
 import { assets } from "../../assets/assets";
 import "./FoodItem.css";
 import { useAppContext } from "../../context/storeContext";
+import { useNavigate } from "react-router";
 function FoodItem({
   name,
   price,
@@ -11,9 +12,15 @@ function FoodItem({
 }) {
   const { addToCart, removeFeomCart, cartCount } =
     useAppContext();
+  const navigate = useNavigate()
 
   return (
-    <div key={_id} className="food-item">
+    <div key={_id} className="food-item" onClick={(e)=> {
+      e.stopPropagation()
+      if(e.target.className == 'food-item-img'){
+        navigate(`/meal-details/${_id}`)
+      }
+    }}>
       <div className="food-item-image">
         <img
           className="food-item-img"
