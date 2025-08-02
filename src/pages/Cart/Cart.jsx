@@ -11,7 +11,7 @@ function Cart() {
   if (!getTotal()) {
     return <div className="centered">
       <h2>Add Your Favorite Meals into Cart</h2>
-      <img src="/public/menu_7.png" />
+      <img src="../menu_7.png" />
       <button  className="no-item" onClick={handleScroll}>Explore Menu</button>
     </div>
       }
