@@ -4,10 +4,13 @@ import {  useState } from "react";
 import { useAppContext } from "../../context/storeContext.jsx";
 import { Link, NavLink } from "react-router";
 import useLocalStorage from "../../Hooks/useLocalStorage.jsx";
+import { TfiMenu } from "react-icons/tfi";
+import { MdLightMode } from "react-icons/md";
+import { RiCloseLargeLine } from "react-icons/ri";
 
 function Navbar({ setLoginPopup, loginPopUp }) {
   const [activeLink, setActiveLink] = useState("home");
-  const { getTotal, setSeachDisplay, mode, setMode, setMobileMennu} = useAppContext();
+  const { getTotal, setSeachDisplay, mode, setMode, setMobileMennu, mobileMenu} = useAppContext();
   const {getLocalStorage, setLocalStorage} = useLocalStorage()
   
 
@@ -61,7 +64,8 @@ function Navbar({ setLoginPopup, loginPopUp }) {
 
         {/* right menu */}
         <div className="navbar-right">
-          <img
+        <div className="nav-hidden">
+            <img
             onClick={(e)=> {
               e.stopPropagation()
               setSeachDisplay(prev => !prev)
@@ -84,8 +88,16 @@ function Navbar({ setLoginPopup, loginPopUp }) {
             {loginPopUp ? "Sign Out" : "Sign In"}
           </button>
         </div>
-         <div className="btn-group"><button className="mode-btn" onClick={handleThemeMode}>{getLocalStorage('mode') == 'light'? 'Switch Dark' : 'Switch Light'}</button>
-          <button className="mode-btn"   onClick={()=> setMobileMennu(prev => !prev)}>Open Menu</button></div>
+         <div className="mini-menu mobile-icon">
+            <Link to="/cart">
+              <img src={assets.basket_icon} />
+            </Link>
+            <div className={getTotal() > 0 ? "dot" : ""}></div>
+          </div>
+           <div className="btn-group "><button className="mode-btn" onClick={handleThemeMode}><MdLightMode /></button>
+          <button className="mode-btn mobile-icon" onClick={()=> setMobileMennu(prev => !prev)}>{ mobileMenu ? <RiCloseLargeLine /> : <TfiMenu />  }</button></div>
+        </div>
+        
       </nav>
     </header>
   );

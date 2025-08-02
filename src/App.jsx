@@ -9,10 +9,9 @@ import Search from "./components/Search/Search.jsx";
 import { useAppContext } from "./context/storeContext.jsx";
 import useLocalStorage from "./Hooks/useLocalStorage.jsx";
 import MobileMenu from "./components/MobileMenu/MobileMenu.jsx";
-import Message from "./components/Message/Message.jsx";
 
 function App() {
-  const {searchDisplay, mode, setSeachDisplay, mobileMenu} = useAppContext()
+  const {searchDisplay, setSeachDisplay} = useAppContext()
 
   const [loginPopUp, setLoginPopup] = useState(false)
   const {getLocalStorage} = useLocalStorage()
@@ -41,7 +40,6 @@ function App() {
      <ScrollToTop/>
     {searchDisplay && <Search/>}
     <MobileMenu/>
-    <Message/>
     </div>
   );
 }

@@ -60,12 +60,6 @@ ul{
   .navbar-menu{
     color: white;
   }
-  .navbar-right{
-  border: 2px solid white;
-  padding: 10px 30px;
-  border-radius: 30px;
-  color: white;
-  }
   .nav-btn{
     color: white;
   }
@@ -118,10 +112,10 @@ ul{
   color: white;
  }
 
- @media (max-width: 768px) {
-  .navbar-right{
-    display: none;
-  }
-}
+ .open-menu{
+  background-color: black;
+  color: white;
+ }
+
 }
 

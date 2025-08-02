@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { food_list } from "../assets/assets";
 const AppContext = createContext(null);
 
@@ -8,6 +8,9 @@ export default function AppContextProvider({ children }) {
   const [searchDisplay, setSeachDisplay] = useState(false)
   const [mobileMenu, setMobileMennu] = useState(false)
 
+    useEffect(()=>{
+    console.log('cartCount', cartCount)
+  }, [cartCount])
   function addToCart(itemId, name) {
     if (!cartCount[itemId]) {
       setCartCount((prev) => ({
@@ -23,6 +26,8 @@ export default function AppContextProvider({ children }) {
       }));
     }
   }
+
+  
 
   function removeFeomCart(itemId) {
     setCartCount((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));

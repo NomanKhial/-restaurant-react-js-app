@@ -12,7 +12,7 @@ function Dishes({catagory}) {
           {
             meals.map(({name, price, image, _id, description, category : mealtype})=> {
                if(catagory === 'All' || catagory === mealtype){
-              return <FoodItem name={name} price={price} image={image} _id={_id} description={description} mealtype={mealtype} />
+              return <FoodItem name={name} price={price} image={image} key={_id} _id={_id} description={description} mealtype={mealtype} />
               }
             })
           }
