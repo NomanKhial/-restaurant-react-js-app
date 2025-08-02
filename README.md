@@ -45,7 +45,7 @@ A fully responsive, dynamic food ordering website built with **React.js**. Users
 Clone this repo and run it locally:
 
 ```bash
-git clone https://github.com/your-username/food-ordering-app.git
+git clone [https://github.com/your-username/food-ordering-app.git](https://github.com/NomanKhial/-restaurant-react-js-app.git)
 npm install
 npm run dev
 ```
