@@ -5,7 +5,7 @@ aside{
     top: 100px;
     background-color: rgb(255, 255, 255);
     height: 100%;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition:  all 1s;
     color: rgb(0, 0, 0);
     padding: 20px;
