@@ -41,7 +41,7 @@ aside ul li{
 .mobile-menu-top button{
     border: none;
     height: 100%;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -51,5 +51,5 @@ aside ul li{
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
